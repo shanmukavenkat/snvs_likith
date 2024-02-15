@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD_BOOK_details</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ADDbook.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<!--nav bar--->
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="#"><img src="VVIT_logo.svg" alt="vvit"  width="80"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-justify"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--end of nav bar--->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <marquee behavior="scroll" direction="left" class="marquee  mt-2">WELCOME TO VVIT LIBRARY ---->
+                <mark>ADD BOOK DETAILS</mark><---- ---->
+                <mark>REMOVE BOOK DETAILS</mark><----
+            </marquee>
+        </div>
+        <!--add book details-->
+        <div class=" col-12 mt-3 w-50%">
+            <form class=" card " >
+                <fieldset class=" card m-3">
+                    <legend class="w-auto">Enter Book Details:</legend>
+                    <label for="book_name1">Book Name*</label>
+                    <input type="text" name="book_name" id="book_name1" class="form-control" placeholder="Enter Book Name">
+
+                    <label for="book_serial_no2">Book Serial No*</label>
+                    <input type="text" name="book_serial_no" id="book_serial_no2" class="form-control" placeholder="Enter Book Serial No">
+
+                    <!--enter no of books--->
+                    <label for="no_of_books2">Enter No of Books</label>
+                    <input type="number" name="book_serial_no" id="no_of_books2" class="form-control" placeholder="1">
+
+                    <!-- Add a submit button -->
+                    <button type="submit" class="btn btn-primary mt-3">Press Here To add</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class=" col-12 mt-3">
+            <form class="card ">
+                <fieldset class=" card m-3">
+                    <legend class="w-auto">Remove Book Details:</legend>
+                    <label for="book_name">Book Name*</label>
+                    <input type="text" name="book_name" id="book_name" class="form-control" placeholder="Enter Book Name">
+                    <!--enter book serial no--->
+                    <label for="book_serial_no">Book Serial No*</label>
+                    <input type="text" name="book_serial_no" id="book_serial_no" class="form-control" placeholder="Enter Book Serial No">
+                    <!-- enter author name-->
+                    <label for="author_name">Author Name</label>
+                    <input type="text" name="author_name" id="author_name" class="form-control" placeholder="Enter Author Name">
+                    <!--enter no of books--->
+                    <label for="no_of_books">Enter No of Books</label>
+                    <input type="number" name="book_serial_no" id="no_of_books" class="form-control" placeholder="1">
+
+                    <!-- Add a submit button -->
+                    <button type="submit" class="btn btn-primary mt-3">Remove</button>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

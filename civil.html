@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap Responsive Nav Bar</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="civil.css">
+    </head>
+<body>
+<!--nav bar--->
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="#"><img src="VVIT_logo.svg" alt="vvit"  width="80"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-justify"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--end of nav bar--->
+<!-- branch and search bar-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class=" d-flex flex-row justify-content-center">
+            <div>
+                <button class="btn btn-primary search">CIVIL-year</button>
+            </div>
+            <div class="search-container m-2">
+                <input type="search" name="search" id="search"   placeholder="  SEARCH STUDENT ROLLNO " class="search-input">
+                <label for="search" class="m-2"><i class="bi bi-search search-icon"></i></label>
+            </div>
+            </div>
+        </div>
+
+<!------- add delete book ,add delete student----->
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class=" d-flex flex-row justify-content-between">
+
+                 <div>
+                      <button class="btn btn-primary search" id="add-button" onclick="addButton()">ADD STUDENT</button>
+                 </div>
+                 <div>
+                      <button class="btn btn-primary search">DELETE STUDENT</button>
+                 </div>
+                </div>
+          </div>
+
+<!--students numbers--->
+        <div class=" card mt-2 m-3" >
+     <div class=" p-3 d-flex flex-row justify-content-center">
+         <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0101</button></a>
+         <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0102</button></a>
+         <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0103</button></a>
+         <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0104</button></a>
+         <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0105</button></a>
+         <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0106</button></a>
+         <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0107</button></a>
+         <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0108</button></a>
+     </div>
+    <div class=" p-3 d-flex flex-row justify-content-center">
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0109</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0110</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0111</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0112</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0113</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0114</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0115</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0116</button></a>
+    </div>
+    <div class=" p-3 d-flex flex-row justify-content-center">
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0117</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0118</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0119</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0120</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0121</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0122</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0123</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0124</button></a>
+    </div>
+    <div class=" p-3 d-flex flex-row justify-content-center">
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0125</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0126</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0127</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0128</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0129</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0130</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0131</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0132</button></a>
+    </div>
+    <div class=" p-3 d-flex flex-row justify-content-center">
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0133</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0134</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0135</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0136</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0137</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0138</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0139</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0140</button></a>
+    </div>
+    <div class=" p-3 d-flex flex-row justify-content-center">
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0141</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0142</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0143</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0144</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0145</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0146</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0147</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0148</button></a>
+    </div>
+    <div class=" p-3 d-flex flex-row justify-content-center">
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0149</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0150</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0151</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0152</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0153</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0154</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0155</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0156</button></a>
+    </div>
+    <div class=" p-3 d-flex flex-row justify-content-center">
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0157</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0158</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0159</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0160</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0161</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0162</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0163</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2">21BQ1A0164</button></a>
+        </div>
+    <div class=" p-3 d-flex flex-row justify-content-center">
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0165</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0166</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0167</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0168</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0169</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0170</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0171</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0172</button></a>
+    </div>
+    <div class=" p-3 d-flex flex-row justify-content-center">
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0173</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0174</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0175</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0176</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0177</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0178</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0179</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0180</button></a>
+    </div>
+    <div class=" p-3 d-flex flex-row justify-content-center" id="button-container">
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0181</button></a>
+        <a href="21bq1a4201.html"><button class="color1 btn  m-2 ">21BQ1A0182</button></a>
+    </div>
+
+           <!-- <div id="button-container" class="p-3 d-flex flex-row justify-content-center"> -->
+                <!-- Existing Buttons will be appended here -->
+            <!--</div> -->
+
+        </div>
+
+    </div>
+</div>
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function addButton() {
+        var button = document.createElement("button");
+        button.textContent = "NEW Student";
+        button.classList.add("btn", "color1", "m-2");
+        document.getElementById("button-container").appendChild(button);
+    }
+
+
+
+</script>
+</body>
+</html>

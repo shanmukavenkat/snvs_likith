@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile and Book Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Psoppins%26display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="21bq1a4201.css">
+    <style>
+        /* Add your custom styles here */
+        /* You can modify or add styles as needed */
+        /* This is just a placeholder */
+    </style>
+</head>
+<body>
+
+<!--nav bar--->
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="#"><img src="VVIT_logo.svg" alt="vvit"  width="80"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-justify"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--end of nav bar--->
+
+<!-- Student Profile -->
+<div class="student-profile ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-transparent text-center">
+                        <img class="profile_img" src="https://placeimg.com/640/480/arch/any" alt="">
+                        <h3 id="stuName">Name</h3>
+                    </div>
+                    <div class="card-body">
+                        <strong class="pr-1">Student ID:</strong> <p class="mb-0" id="sName">321000001</p>
+                        <strong class="pr-1">Branch: </strong> <p class="mb-0" id="sClass">csm</p>
+                        <strong class="pr-1">Section: </strong> <p class="mb-0" id="sSection">A</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 ">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-transparent border-0">
+                        <h3 class="mb-0">General Information</h3>
+                    </div>
+                    <div class="card-body pt-0">
+                        <form>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Name</th>
+                                    <td>:</td>
+                                    <td><input type="text" id="enterName"></td>
+                                </tr>
+                                <tr>
+                                    <th>Roll Number</th>
+                                    <td>:</td>
+                                    <td><input type="text" id="rollNo"></td>
+                                </tr>
+                                <tr>
+                                    <th>Academic Year</th>
+                                    <td>:</td>
+                                    <td><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th>Gender</th>
+                                    <td>:</td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <th>Student Branch</th>
+                                    <td>:</td>
+                                    <td><input type="text" id="newBranch"></td>
+                                </tr>
+                                <tr>
+                                    <th>Student Section</th>
+                                    <td>:</td>
+                                    <td><input type="text" id="nameDisplay"></td>
+                                </tr>
+                                <tr>
+                                    <th>Student ID</th>
+                                    <td>:</td>
+                                    <td><input type="text" id="studentId"></td>
+                                </tr>
+                                <tr>
+                                    <th>Remarks</th>
+                                    <td>:</td>
+                                    <td><textarea name="opinion" placeholder="Mention your Remarks"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <th>Issues</th>
+                                    <td>:</td>
+                                    <td><textarea name="opinion" placeholder="Mention your Remarks"></textarea></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center mb-4">
+                        <button class="btn btn-primary" onclick="saveButton()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card1 shadow-lg mt-3">
+    <h5>STUDENTS BOOK DETAILS</h5>
+    <div>
+        <table class="table1">
+            <thead>
+            <tr>
+                <th>Book Name</th>
+                <th>Book ID</th>
+                <th>Issue Date</th>
+                <th>Return Date</th>
+                <th>Renewal Date</th>
+                <th>Serial No</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="bookTableBody">
+            <!-- Book rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex flex-row justify-content-center mb-4">
+        <button class="btn btn-success" onclick="addBook()">Add Book</button>
+    </div>
+</div>
+
+<script>
+    let books = JSON.parse(localStorage.getItem('books')) || [];
+
+    const tableBody = document.getElementById('bookTableBody');
+
+    // Function to render books
+    function renderBooks() {
+        tableBody.innerHTML = '';
+        books.forEach((book, index) => {
+            const row = `
+                <tr>
+                    <td>${book.name}</td>
+                    <td>${book.id}</td>
+                    <td>${book.issueDate}</td>
+                    <td>${book.returnDate}</td>
+                    <td>${book.renewalDate}</td>
+                    <td>${book.serialNo}</td>
+                    <td>
+                       <span class="edit-icon" onclick="editBook(${index})">&#9998;</span>
+                        <span class="delete-icon" onclick="deleteBook(${index})">&#10008;</span>
+                    </td>
+                </tr>
+            `;
+            tableBody.innerHTML += row;
+        });
+    }
+
+    // Function to save books to local storage
+    function saveBooks() {
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+
+    // Function to add a new book
+    function addBook() {
+        const name = prompt('Enter book name:');
+        const id = prompt('Enter book ID:');
+        const issueDate = prompt('Enter issue date:');
+        const returnDate = prompt('Enter return date:');
+        const renewalDate = prompt('Enter renewal date:');
+        const serialNo = prompt('Enter serial number:');
+
+        const book = {
+            name,
+            id,
+            issueDate,
+            returnDate,
+            renewalDate,
+            serialNo
+        };
+
+        books.push(book);
+        saveBooks();
+        renderBooks();
+    }
+
+    // Function to edit a book
+    function editBook(index) {
+        const book = books[index];
+        const newName = prompt('Enter new name:', book.name);
+        const newId = prompt('Enter new ID:', book.id);
+        const newIssueDate = prompt('Enter new issue date:', book.issueDate);
+        const newReturnDate = prompt('Enter new return date:', book.returnDate);
+        const newRenewalDate = prompt('Enter new renewal date:', book.renewalDate);
+        const newSerialNo = prompt('Enter new serial number:', book.serialNo);
+
+        books[index] = {
+            name: newName,
+            id: newId,
+            issueDate: newIssueDate,
+            returnDate: newReturnDate,
+            renewalDate: newRenewalDate,
+            serialNo: newSerialNo
+        };
+
+        saveBooks();
+        renderBooks();
+    }
+
+    // Function to delete a book
+    function deleteBook(index) {
+        const confirmation = confirm('Are you sure you want to delete this book?');
+        if (confirmation) {
+            books.splice(index, 1);
+            saveBooks();
+            renderBooks();
+        }
+    }
+
+    // Initial rendering
+    renderBooks();
+
+
+    function saveButton() {
+        let nameStu = document.getElementById("enterName").value;
+        let rollNo = document.getElementById("rollNo").value;
+        let bClass = document.getElementById("newBranch").value;
+        let nameDisplay = document.getElementById("nameDisplay").value;
+        let studentId = document.getElementById("studentId").value;
+
+        document.getElementById("stuName").innerHTML = nameStu;
+        document.getElementById("sName").innerHTML = studentId;
+        document.getElementById("sClass").innerHTML = bClass;
+        document.getElementById("sSection").innerHTML = nameDisplay;
+
+    }
+
+</script>
+
+</body>
+</html>

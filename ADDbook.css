@@ -1,0 +1,33 @@
+body{
+    background-color: aliceblue;
+}
+fieldset {
+    border: 25px groove #ff7f61;
+    padding: 20px;
+}
+label{
+    margin-top: 10px;
+}
+legend{
+    color: #ff7f61;
+    font-family:  Gill Sans, sans-serif;
+    background-color: aliceblue;
+}
+mark{
+    background-color: #ff7f61;
+    color: aliceblue;
+    font-family: "roboto",sans-serif;
+}
+.card{
+    background-color: aliceblue;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(50, 62, 255, 0.37);
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+form{
+    width: auto;
+}

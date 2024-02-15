@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: #000;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #F6FBFF;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+.student-profile{
+    margin-top:10%
+}
+.student-profile .card {
+    border-radius: 10px;
+}
+
+.student-profile .card .card-header .profile_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto;
+    border: 10px solid #ccc;
+    border-radius: 50%;
+}
+
+.student-profile .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.student-profile .card p {
+    font-size: 16px;
+    color: #000;
+}
+
+.student-profile .table th,
+.student-profile .table td {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #000;
+}
+.btn{
+    width: 20%;
+}
+input{
+    border: none;
+}
+.card{
+    border: 2px solid White;
+    border-radius: 10px;
+    background: #F6FBFF;
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(220px);
+}
+body {
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  radial-gradient(#F69074 1.6px, transparent 1.6px), radial-gradient(#F69074 1.6px, #e5e5f7 1.6px);
+    background-size: 64px 64px;
+    background-position: 0 0,32px 32px;
+}
+input{
+    border: none;
+}
+.card1{
+    border: 2px solid White;
+    border-radius: 10px;
+    background: #F6FBFF;
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(220px);
+    margin: 40px;
+    padding:15px;
+}
+.table1, th {
+    border: 1px solid #F69074;
+    padding: 5px;
+    text-align: left;
+    font-size: 15px;
+}
+.table1, td {
+    border: 1px solid #F69074;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
+    font-size: 15px;
+}
+.table1{
+    border-collapse: collapse;
+    width: 100%;
+}
+textarea{
+    border: none;
+    width: fit-content;
+}
