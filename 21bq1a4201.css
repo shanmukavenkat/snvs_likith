@@ -1,27 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    color: #000;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: #F6FBFF;
-    font-family: "Poppins", sans-serif;
-}
 
 
 
 .student-profile{
-    margin-top:10%
+    margin-top:2%
 }
 .student-profile .card {
     border-radius: 10px;
@@ -66,14 +47,12 @@ input{
     -webkit-backdrop-filter: blur(220px);
 }
 body {
-    background-color: #e5e5f7;
-    opacity: 0.8;
-    background-image:  radial-gradient(#F69074 1.6px, transparent 1.6px), radial-gradient(#F69074 1.6px, #e5e5f7 1.6px);
-    background-size: 64px 64px;
-    background-position: 0 0,32px 32px;
+    background-image: linear-gradient(90deg, transparent 0%, transparent 10%, #DB676C 10%, #DB676C calc(10% + 2px), transparent calc(10% + 2px), transparent 100%), linear-gradient(180deg, white 10%, transparent 10%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 2px, transparent 2px, transparent 32px), linear-gradient(white,white);
 }
 input{
     border: none;
+    width: 75%;
+    background-color:#F6FBFF;
 }
 .card1{
     border: 2px solid White;
@@ -103,5 +82,13 @@ input{
 }
 textarea{
     border: none;
-    width: fit-content;
+    width: 75%;
+    background-color:#F6FBFF;
+
+}
+textarea:focus{
+    outline: none;
+}
+input:focus{
+    outline: none;
 }
