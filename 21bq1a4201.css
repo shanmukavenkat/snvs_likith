@@ -51,7 +51,7 @@ body {
 }
 input{
     border: none;
-    width: 75%;
+    width: 100%;
     background-color:#F6FBFF;
 }
 .card1{
@@ -82,7 +82,7 @@ input{
 }
 textarea{
     border: none;
-    width: 75%;
+    width: 100%;
     background-color:#F6FBFF;
 
 }
